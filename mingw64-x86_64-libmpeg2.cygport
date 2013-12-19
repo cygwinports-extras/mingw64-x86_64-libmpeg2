@@ -1,0 +1,16 @@
+CROSS_HOST="x86_64-w64-mingw32"
+inherit cross
+
+NAME="mingw64-x86_64-libmpeg2"
+VERSION=0.5.1
+RELEASE=1
+CATEGORY="Devel"
+SUMMARY="MPEG-1/2 video library for Win64 toolchain"
+DESCRIPTION="libmpeg2 is a free library for decoding mpeg-2 and mpeg-1 video
+streams."
+HOMEPAGE="http://libmpeg2.sourceforge.net/"
+SRC_URI="http://libmpeg2.sourceforge.net/files/libmpeg2-${VERSION}.tar.gz"
+SRC_DIR="libmpeg2-${VERSION}"
+
+CYGCONF_ARGS="--disable-dependency-tracking --disable-directx --disable-sdl --without-x"
+MAKEOPTS+=" bin_PROGRAMS= man_MANS= "
